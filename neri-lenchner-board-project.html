@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+ 
+  <title>Project 1</title>
+  <link rel="stylesheet" href="neri-lenchner-board-project.css">
+</head>
+<body>
+
+  <div class="general-container">
+    <h1>My Task Board</h1>
+    <div class="notebook-page">
+
+      <form onsubmit="addTask(event); return false;">
+        <textarea id="large-text-erea-element" class="large-text-erea" name="taskData" minlength="2" placeholder="Enter Task Details"  required></textarea>
+        <input class="date-input" name="taskDate" type="date" required>
+        <input name="taskTime" type="time" required>
+        <button class="add-button" type="submit">Add Task</button>
+      </form>
+
+      <button class="reset-button" onclick="resetForm()">Reset Form</button>
+    </div>
+      <div id="notes-monitor-element" class="notes-monitor">
+    </div>
+  </div>
+  
+  <script src="neri-lenchner-board-project.js"></script>
+</body>
+</html>
+
+<!--
+--הערות--
+- הוספתי בדיקה לתאריך שמוזן, למקרה שהתאריך כבר עבר 
+- הרחבתי את השימוש בפונט הקורסיבי לטופס עצמו ולפתקים מטעמי עיצוב, למרות שהוא כביכול פחות פרקטי, שיניתי אותו רק בתאריך 
+והשעה על הפתק(היה נראה לי הכי יפה)
+- הסקרול-באר בפתקים ובטקסטאריא, קיים במקרה של אוברפלואו, אבל בלתי נראה, גם זה מטעמי עיצוב 
+-->

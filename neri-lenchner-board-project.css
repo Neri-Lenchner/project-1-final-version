@@ -1,0 +1,203 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Covered By Your Grace", cursive, sans-serif, Arial;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+  padding-top: 20px;
+  font-weight: 900;
+  font-size: 60px;
+  opacity: 0.6;
+}
+
+form {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 10px;
+  min-width: 600px;
+}
+
+button {
+  color: rgb(36, 9, 125);
+  font-weight: bold;
+  transition: all 0.1s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+textarea {
+  font-family: "Covered By Your Grace", cursive;
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  scrollbar-width: none;
+  text-align: center;
+}
+
+.general-container {
+  background: url('images/board.jpg') center center / 100% 100% no-repeat;
+  height: 100vh;
+  width: 100vw;
+  min-width: 960px;
+  font: 400 normal 30px "Covered By Your Grace", cursive, sans-serif, Arial;
+}
+
+.notebook-page {
+  background: url('images/notebook-page.jpg') center center / 100% 100% no-repeat;
+  height: 300px;
+  width: 60%; 
+  min-width: 600px;                   
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  margin-top: 10px;
+  filter: drop-shadow(0 2px 4px black);
+}
+
+.notebook-page>button,
+form input,
+form button {
+  min-width: 200px;
+  height: 30px;
+  border: none;
+  font-family: "Covered By Your Grace";
+  font-size: 30px;
+  text-align: center;
+  background-color: transparent;
+  margin-bottom: 19px;
+}
+
+.notebook-page button:hover {
+  scale: 1.1;
+}
+
+.notebook-page button:active {
+  color: red;
+  filter: drop-shadow(1px 1px 1px yellow);
+}
+
+.large-text-erea {
+  width: 600px;
+  height: 70px;
+  resize: none; 
+  outline: none;
+}
+
+.date-input {
+  margin-bottom: 3px;
+}
+
+.add-button {
+  margin-top: 15px;
+}
+
+.reset-button {
+  margin: 0 auto;
+  width: 200px;
+}
+
+.notes-monitor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: start;
+  overflow-y: auto;
+  scroll-behavior: smooth; 
+  scrollbar-width: none;
+  height: 350px;
+  margin: 0 30px 0 30px;
+}
+
+.note {
+  background: url('images/note.png') no-repeat;
+  background-size: 100% 100%;
+  width: 200px;
+  height: 350px;
+  filter: drop-shadow(0 20px 10px black);
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.last-note {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.note-info {
+  margin-top: 40px;
+}
+
+.text {
+  width: 155px;
+  height: 140px;
+  background: transparent;
+  border: none;
+  resize: none;
+  font-family: "Covered By Your Grace", cursive, sans-serif, Arial;
+  font-size: 25px;
+  color: black;
+  box-sizing: border-box;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.note-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;;
+  background: black;
+  color: rgb(241, 217, 137);
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 65px;
+  right: 10px;
+  opacity: 0;
+}
+
+.note:hover .note-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.note-button:hover {
+  opacity: 1;
+}
+
+.date-time-container {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(47, 47, 153);
+  margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
